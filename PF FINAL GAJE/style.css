@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    margin: 20px;
+    min-height: 100vh;
+}
+
+body.dark {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+body.dark .container {
+    background: rgba(68, 68, 68, 0.9);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.category-badge, .priority-badge {
+    margin-left: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8em;
+}
+
+.category-Food { background: #ff6b6b; color: white; }
+.category-Places { background: #4ecdc4; color: white; }
+.category-Work { background: #45b7d1; color: white; }
+.category-Activities { background: #f9ca24; color: black; }
+.category-Assignments { background: #f0932b; color: white; }
+.category-Personals { background: #eb4d4b; color: white; }
+.priority-Low { background: gray; color: white; }
+.priority-Medium { background: yellow; color: black; }
+.priority-High { background: red; color: white; }
+
+.timer-display { margin: 0 10px; }
+.timer-controls { display: inline; }
+.timer-btn { margin: 0 2px; padding: 2px 5px; }
+
+.hidden { display: none; }
+
+form { margin: 10px 0; display: flex; flex-wrap: wrap; gap: 10px; }
+input, select, button { margin: 0; padding: 8px; border: 1px solid #ddd; border-radius: 6px; }
+button { background: #667eea; color: white; cursor: pointer; }
+button:hover { background: #5a67d8; }
+#dark-mode-toggle { background: #2d3748; }
+#dark-mode-toggle:hover { background: #4a5568; }
+#export-btn { background: #48bb78; }
+#export-btn:hover { background: #38a169; }
+.timer-btn { background: #ed8936; }
+.timer-btn:hover { background: #dd6b20; }
+.delete-btn { background: #e53e3e; }
+.delete-btn:hover { background: #c53030; }
+
+ul { list-style: none; padding: 0; }
+li { padding: 12px; border-bottom: 1px solid rgba(0,0,0,0.1); cursor: pointer; border-radius: 6px; margin-bottom: 5px; background: rgba(255,255,255,0.5); }
+body.dark li { background: rgba(255,255,255,0.1); border-bottom-color: rgba(255,255,255,0.2); }
+li:hover { background: rgba(255,255,255,0.7); }
+body.dark li:hover { background: rgba(255,255,255,0.2); }

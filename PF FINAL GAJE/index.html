@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        <button id="dark-mode-toggle">Dark Mode</button>
+        <div id="task-counter"></div>
+        <div id="notification" class="hidden"></div>
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Task" required>
+            <select id="category-select">
+                <option value="Food">Food</option>
+                <option value="Places">Places</option>
+                <option value="Work">Work</option>
+                <option value="Activities">Activities</option>
+                <option value="Assignments">Assignments</option>
+                <option value="Personals">Personals</option>
+            </select>
+            <select id="priority-select">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <input type="number" id="timer-input" placeholder="Timer (min)">
+            <button type="submit">Add</button>
+        </form>
+        <input type="text" id="search-input" placeholder="Search">
+        <select id="filter-select">
+            <option value="all">All</option>
+            <option value="Food">Food</option>
+            <option value="Places">Places</option>
+            <option value="Work">Work</option>
+            <option value="Activities">Activities</option>
+            <option value="Assignments">Assignments</option>
+            <option value="Personals">Personals</option>
+        </select>
+        <button id="export-btn">Export JSON</button>
+        <ul id="task-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
