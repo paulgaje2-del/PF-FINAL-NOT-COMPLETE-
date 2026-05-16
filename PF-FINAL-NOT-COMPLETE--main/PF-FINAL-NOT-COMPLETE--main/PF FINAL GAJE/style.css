@@ -1,0 +1,139 @@
+:root {
+  --primary: #667eea;
+  --primary-dark: #5a67d8;
+  --success: #48bb78;
+  --error: #e53e3e;
+  --warning: #ed8936;
+  --delete: #c53030;
+  --light-bg: rgba(255, 255, 255, 0.9);
+  --dark-bg: rgba(68, 68, 68, 0.9);
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+  margin: 20px;
+  min-height: 100vh;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+body.dark {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;   /* wider container */
+  width: 90%;          /* responsive width */
+  margin: 0 auto;
+  background: var(--light-bg);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  backdrop-filter: blur(12px);
+  transition: background 0.5s ease;
+}
+
+body.dark .container {
+  background: var(--dark-bg);
+}
+
+form, .task-controls {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+form input, form select, form button {
+  flex: 1;             /* evenly distribute width */
+  min-width: 180px;    /* prevent too small controls */
+}
+
+input, select, button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+#dark-mode-toggle { background: #2d3748; }
+#dark-mode-toggle:hover { background: #4a5568; }
+
+#export-btn { background: var(--success); }
+#export-btn:hover { background: #38a169; }
+
+.timer-btn { background: var(--warning); }
+.timer-btn:hover { background: #dd6b20; }
+
+.delete-btn { background: var(--error); }
+.delete-btn:hover { background: var(--delete); }
+
+ul { list-style: none; padding: 0; }
+
+li {
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+li:hover {
+  background: rgba(255,255,255,0.9);
+  transform: translateY(-2px);
+}
+
+body.dark li { background: rgba(255,255,255,0.1); }
+body.dark li:hover { background: rgba(255,255,255,0.2); }
+
+.completed .task-text {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.category-badge, .priority-badge {
+  margin-left: 10px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75em;
+  font-weight: 600;
+}
+
+.category-Food { background: #ff6b6b; color: white; }
+.category-Places { background: #4ecdc4; color: white; }
+.category-Work { background: #45b7d1; color: white; }
+.category-Activities { background: #f9ca24; color: black; }
+.category-Assignments { background: #f0932b; color: white; }
+.category-Personals { background: #eb4d4b; color: white; }
+
+.priority-Low { background: #a8dadc; color: black; }
+.priority-Medium { background: #ffd166; color: black; }
+.priority-High { background: #ef476f; color: white; }
+
+#notification {
+  margin: 1rem 0;
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#notification.success { background: var(--success); color: #fff; opacity: 1; }
+#notification.error { background: var(--error); color: #fff; opacity: 1; }
